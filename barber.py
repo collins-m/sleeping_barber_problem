@@ -6,10 +6,8 @@ BARBERS = 3 # Number of barbers working.
 
 EVENT = threading.Event() # Customer signals the barber to wake up.
 
-ARRIVAL_WAIT = 1.5 # constant for arrival wait time.
-
 def wait():
-	time.sleep(ARRIVAL_WAIT * random.random()) # determines wait time upon arrival.
+	time.sleep(1.5 * random.random()) # determines wait time upon arrival.
 
 class Customer(threading.Thread):
 	def __init__(self, queue):
